@@ -1,12 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//redux
+
+const actionTest = () => {
+    return {
+      type:'test'
+    }
+}
+
+const reducer = ( state = 0, action ) => {
+  switch( action.type ){
+    case 'test':
+      return state + 1
+  }
+}
+
+const store = createStore( reducer )
+
+//subscribe need to be call before dispatch
+store.subscribe( () => {
+  console.log( store.getState() )
+})
+
+store.dispatch( actionTest() )
+store.dispatch( actionTest() )
+store.dispatch( actionTest() )
+store.dispatch( actionTest() )
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+        <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
