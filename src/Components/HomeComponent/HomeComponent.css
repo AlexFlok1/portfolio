@@ -1,0 +1,33 @@
+[ menu-btn ]{
+    color:#302f2e!important;
+    font-weight: bolder!important;
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+    transition: all 0.3s ease-in-out;
+    border: 0;
+    outline: 0;
+    font-size: 1rem!important;
+    border-radius: 320px!important;
+    padding: 12px!important;
+    background-color:#FFF!important;
+    text-shadow: 1px 1px 0 #FFF;
+    margin-bottom: 1.2rem!important;
+}
+[ menu-btn ]:hover{
+    box-shadow: 0px 0px 0px #FFF, 0px 0px 0px #BABECC;
+    background-color: #F5DF4D!important;
+}
+.ht{
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hometext-1{
+    color: #F5DF4D;
+    font-size: 15rem;
+}
+.hometext-2{
+    font-size: 5rem;
+    color: black;
+    transform: translateX(-31px) translateY(20px);
+}

@@ -1,0 +1,19 @@
+.about-text{
+    font-size: 1.6rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+.about-tags{
+    color: #F5DF4D!important;
+    font-size: 1.5rem!important;
+    font-weight: bold;
+    font-family: 'Abril Fatface', cursive !important;
+}
+.back-btn{
+    font-size: 1.6rem !important;
+    letter-spacing: 5px !important;
+    font-family: 'Oswald', sans-serif !important;
+    position: absolute !important;
+    left:1%;
+    top: 2%
+}
