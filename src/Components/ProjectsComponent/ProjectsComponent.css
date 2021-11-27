@@ -89,9 +89,16 @@
 .project-active{
     top: 0;
 }
-#back-btn{
-    border-radius: 0!important;
-    color: #302f2e!important;
-    font-family: 'Oswald', sans-serif !important;
-    border-color: #302f2e!important;
+
+/* PHONE SCREEN SIZE */
+@media only screen  and ( max-width: 600px ) {
+    .project-count{
+        font-size: 3rem;
+    }
+    .project-name{
+        font-size: 1rem;
+    }
+    .tech_list>li{
+        font-size: .8rem;
+    }
 }

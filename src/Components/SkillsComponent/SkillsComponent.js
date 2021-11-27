@@ -1,10 +1,10 @@
 import  './SkillsComponent.css'
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-
 import { Grid, Paper, List, ListItem, ListItemText, Button  } from '@mui/material'
 import { Radar } from 'react-chartjs-2'
-import { useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+
+//import some subcomponents
+import BackButtonComponent from '../Sub-Components/BackButtonComponent/BackButtonComponent'
 
 const SkillsComponent = () => {
 
@@ -12,7 +12,6 @@ const SkillsComponent = () => {
     const [ options, setOptions ] = useState( null )
     const [ backskills, setBackskills ] = useState( null )
     const [ hoverBlock, setHoverBlock ] = useState( null );
-    const history = useHistory()
 
     useEffect( () => {
 
@@ -76,9 +75,12 @@ const SkillsComponent = () => {
     return (
         <>
             <Grid container style={ { height: '100vh' } }>
-                <Grid item xl={6} lg={6} md={6} sm={12} xs={12} pl={2} pb={2} pt={2} style={ { height: '100%' } }>
+                <Grid height='0.1' item xs={12} p={2} textAlign='right' >
+                    <BackButtonComponent />
+                </Grid>
+                <Grid item xl={6} lg={6} md={6} sm={12} xs={12} pl={2} pb={2} pt={2} height='0.9'>
                     <Paper style={ { height: '100%', width: '100%', background: '#383838' } } >
-                            <Grid container alignContent="center" justifyContent="center" style={{height: '100%'}}>
+                            <Grid container alignContent="center" justifyContent="center" height='1'>
                                 <Grid item xl={6} lg={6} md={6} sm={6} xs={11} style={{height: '30%'}}>
                                     <p 
                                     style={ 
@@ -126,8 +128,8 @@ const SkillsComponent = () => {
                             </Grid>
                     </Paper>
                 </Grid>
-                <Grid item xl={6} lg={6} md={6} sm={12} xs={12} pr={2} pb={2} pt={2} style={ { height: '100%' } }>
-                    <Grid container alignContent="center" justifyContent="center" style={ { height: '100%' } }>
+                <Grid item xl={6} lg={6} md={6} sm={12} xs={12} pr={2} pb={2} pt={2} height='0.9'>
+                    <Grid container alignContent="center" justifyContent="center" height='1'>
                         <Grid item xl={6} lg={6} md={6} sm={6} xs={11} alignContent="center" justifyContent="center" style={ { height: '30%' } }>
                                 <p style={ 
                                     { color: '#383838', fontFamily: "'Share Tech Mono', monospace", 
@@ -147,8 +149,6 @@ const SkillsComponent = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            {/*THIS IS BACK BUTTON PART*/}
-            <Button onClick={ () => { history.push('/') } } className="back-btn"> <KeyboardBackspaceIcon /> BACK </Button>
         </>
     )
 }
