@@ -1,6 +1,6 @@
 .backskill{
     border-radius: 70px!important;
-    height: 40vh!important;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
 .backend_skill{
     color: white; 
     font-size: 1.3rem;
-    font-family: 'Share Tech Mono', monospace
+    font-family: 'Oswald', sans-serif !important;
 }
 .details-block{
     position: absolute;

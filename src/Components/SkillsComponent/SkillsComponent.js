@@ -74,24 +74,51 @@ const SkillsComponent = () => {
 
     return (
         <>
-            <Grid container style={ { height: '100vh' } }>
+            <Grid container height='100vh' width='1'>
                 <Grid height='0.1' item xs={12} p={2} textAlign='right' >
                     <BackButtonComponent />
                 </Grid>
-                <Grid item xl={6} lg={6} md={6} sm={12} xs={12} pl={2} pb={2} pt={2} height='0.9'>
+                <Grid item xl={6} lg={6} md={6} sm={12} xs={12} pl={2} pb={2} pt={2} height='0.9'
+                sx={ {
+                    paddingRight:{
+                        xl: 0,
+                        lg: 0,
+                        md: 0,
+                        sm: '16px',
+                        xs: '16px',
+                        
+                    }
+                } }>
                     <Paper style={ { height: '100%', width: '100%', background: '#383838' } } >
                             <Grid container alignContent="center" justifyContent="center" height='1'>
-                                <Grid item xl={6} lg={6} md={6} sm={6} xs={11} style={{height: '30%'}}>
+                                <Grid item xl={6} lg={6} md={6} sm={6} xs={11} height='0.3'>
                                     <p 
                                     style={ 
-                                        { color: 'white', fontFamily: "'Share Tech Mono', monospace", fontSize: '3rem', fontWeight: '200!important' } 
+                                        { color: 'white', fontFamily: "'Oswald', sans-serif", fontSize: '3rem', fontWeight: '200!important' } 
                                     }>BACKEND KNOWLADGE</p>
                                 </Grid>
                                 <Grid item xs={11}><hr /></Grid>
-                                <Grid item xs={11} style={{height: '70%'}} alignContent="center" justifyContent="center">
-                                       <Grid container spacing={2} alignContent="center" justifyContent="center" style={{height: '100%'}}>
-                                           <Grid item xl={4} lg={4} md={6} sm={10} xs={11}>
-                                                <Paper className="backskill" onMouseEnter={ () => { setHoverBlock( 1 ) } } onMouseLeave={ () => { setHoverBlock( null ) } } >
+                                <Grid item xs={11} height='0.7' alignContent="center" justifyContent="center">
+                                       <Grid container alignContent="center" justifyContent="center" height='1' width='1'>
+                                           <Grid display='flex' justifyContent='center' alignItems='center' item xl={4} lg={4} md={6} sm={10} xs={11} sx={ {
+                                               height:{
+                                                   xl: 1,
+                                                   lg: 1,
+                                                   md: 1,
+                                                   sm: 0.5,
+                                                   xs: 0.5
+                                               }
+                                           } }>
+                                                <Paper className="backskill" onMouseEnter={ () => { setHoverBlock( 1 ) } } onMouseLeave={ () => { setHoverBlock( null ) } }
+                                                sx={ {
+                                                    height: {
+                                                        xl: 0.6,
+                                                        lg: 0.6,
+                                                        md: 0.6,
+                                                        sm: .9,
+                                                        xs: .9
+                                                    }
+                                                } } >
                                                         <span className={"backend_skill"} >Database</span>
                                                         <div className={ ( hoverBlock === 1 ) ? "details-block details-block-hover" : "details-block" } >
                                                             <List>
@@ -107,15 +134,32 @@ const SkillsComponent = () => {
                                                 </Paper>
                                            </Grid>
                                            <Grid item xl={1} lg={1} md={1} ></Grid>
-                                           <Grid item xl={4} lg={4} md={6} sm={10} xs={11} >
-                                                <Paper className="backskill" onMouseEnter={ () => { setHoverBlock( 2 ) } } onMouseLeave={ () => { setHoverBlock( null ) } }>
+                                           <Grid display='flex' justifyContent='center' alignItems='center' item xl={4} lg={4} md={6} sm={10} xs={11} sx={ {
+                                               height:{
+                                                   xl: 1,
+                                                   lg: 1,
+                                                   md: 1,
+                                                   sm: 0.5,
+                                                   xs: 0.5
+                                               }
+                                           } }>
+                                                <Paper className="backskill" onMouseEnter={ () => { setHoverBlock( 2 ) } } onMouseLeave={ () => { setHoverBlock( null ) } }
+                                                sx={ {
+                                                    height: {
+                                                        xl: 0.6,
+                                                        lg: 0.6,
+                                                        md: 0.6,
+                                                        sm: .9,
+                                                        xs: .9
+                                                    }
+                                                } }>
                                                     <span className={"backend_skill"}>Node JS</span>
                                                     <div className={ ( hoverBlock === 2 ) ? "details-block details-block-hover" : "details-block" }>
                                                         <List>
                                                             {
                                                                 backskills && backskills[0].skills.map( ( skill, indx ) => (
                                                                     <ListItem key={ indx }>
-                                                                        <ListItemText primary={ skill } /> 
+                                                                        <ListItemText style={ { fontFamily: "'Oswald', sans-serif" } } primary={ skill } /> 
                                                                     </ListItem>
                                                                 ) )
                                                             }
@@ -132,7 +176,7 @@ const SkillsComponent = () => {
                     <Grid container alignContent="center" justifyContent="center" height='1'>
                         <Grid item xl={6} lg={6} md={6} sm={6} xs={11} alignContent="center" justifyContent="center" style={ { height: '30%' } }>
                                 <p style={ 
-                                    { color: '#383838', fontFamily: "'Share Tech Mono', monospace", 
+                                    { color: '#383838', fontFamily: "'Oswald', sans-serif", 
                                     fontSize: '3rem', fontWeight: '200!important' } 
                                 }>FRONTEND KNOWLADGE</p>
 

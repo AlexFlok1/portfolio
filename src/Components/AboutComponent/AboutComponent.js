@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 
 //import some subcomponents
 import BackButtonComponent from '../Sub-Components/BackButtonComponent/BackButtonComponent'
-import { width } from '@mui/system'
 
 const AboutComponent = () => {
 
@@ -113,8 +112,8 @@ const AboutComponent = () => {
                                 <Grid item xs={12}  style={ { padding: '2%' } } >
                                     <TextField label="Your Story" variant="outlined" multiline rows="4" fullWidth/>
                                 </Grid>
-                                <Grid item xs={4}  style={ { padding: '2%', textAlign: 'center' } } >
-                                    <Button fullWidth style={ { borderRadius: '40px' } } variant="contained" color="primary" onClick={ sendEmail }>SEND</Button>
+                                <Grid item xs={4} textAlign='center'  style={ { padding: '2%' } } >
+                                    <Button fullWidth id='BTN-SUBMIT' variant="contained" onClick={ sendEmail }>SEND</Button>
                                 </Grid>
                             </Grid>
                     </Paper>
