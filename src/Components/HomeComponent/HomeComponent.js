@@ -2,8 +2,7 @@ import './HomeComponent.css';
 import { useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { Grid, Paper, Button } from '@mui/material';
-import { useHistory } from 'react-router';
-import BackButtonComponent from '../Buttons/BackButton';
+import { useHistory } from 'react-router-dom';
 
 const HomeComponent = () => {
   //variables
@@ -150,8 +149,6 @@ const HomeComponent = () => {
           </span>
         </Grid>
       </Grid>
-
-      <BackButtonComponent text='back' />
     </>
   );
 };
