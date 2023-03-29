@@ -10,9 +10,11 @@ type Skill = {
 
 const SkillsPage = () => {
   const [beSkills, setBeSkills] = useState<Skill[]>([]);
+  const [feSkills, setFeSkills] = useState<Skill[]>([]);
 
   useEffect(() => {
     setBeSkills(Skills.filter((skill) => skill.type === 'be'));
+    setFeSkills(Skills.filter((skill) => skill.type === 'fe'));
   }, []);
 
   return (
@@ -35,7 +37,11 @@ const SkillsPage = () => {
                 beSkills.map((skill) => (
                   <Grid
                     item
-                    xs={3}
+                    xl={3}
+                    lg={3}
+                    md={4}
+                    sm={4}
+                    xs={4}
                     display='flex'
                     alignItems='center'
                     justifyContent='center'
@@ -47,7 +53,33 @@ const SkillsPage = () => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} height={1}>
-          <Box component='div'>FrontEnd</Box>
+          <Box
+            component='div'
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
+            height={1}
+          >
+            <Grid container alignItems='center' justifyContent='center'>
+              {feSkills &&
+                feSkills.length > 0 &&
+                feSkills.map((skill) => (
+                  <Grid
+                    item
+                    xl={3}
+                    lg={3}
+                    md={4}
+                    sm={4}
+                    xs={4}
+                    display='flex'
+                    alignItems='center'
+                    justifyContent='center'
+                  >
+                    <SkillBadgeComponent skillName={skill.name} />
+                  </Grid>
+                ))}
+            </Grid>
+          </Box>
         </Grid>
       </Grid>
     </>

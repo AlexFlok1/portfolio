@@ -39,6 +39,7 @@ const AboutComponent = () => {
   return (
     <>
       <Grid
+        padding={0}
         container
         justifyContent='center'
         alignItems='center'
@@ -80,12 +81,7 @@ const AboutComponent = () => {
               background: 'linear-gradient(145deg, #3c3c3c, #323232)',
             }}
             sx={{
-              borderRadius: {
-                xl: '40px 0 0 40px',
-                lg: '40px 0 0 40px',
-                md: '40px 0 0 40px',
-                xs: '0',
-              },
+              borderRadius: 0,
             }}
           >
             <span className='about-text'>Hi</span>
@@ -130,6 +126,7 @@ const AboutComponent = () => {
               alignItems: 'center',
               justifyContent: 'center',
               display: 'flex',
+              borderRadius: 0,
             }}
           >
             <Grid

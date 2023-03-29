@@ -15,7 +15,7 @@ export const Skills = [
     type: 'be',
   },
   {
-    name: 'Ruby',
+    name: 'Ruby on Rails',
     logo: '',
     type: 'be',
   },
@@ -25,8 +25,23 @@ export const Skills = [
     type: 'be',
   },
   {
-    name: 'PostgresSQL',
+    name: 'React',
     logo: '',
-    type: 'be',
+    type: 'fe',
+  },
+  {
+    name: 'Three JS',
+    logo: '',
+    type: 'fe',
+  },
+  {
+    name: 'Redux Saga',
+    logo: '',
+    type: 'fe',
+  },
+  {
+    name: 'React Query',
+    logo: '',
+    type: 'fe',
   },
 ];
