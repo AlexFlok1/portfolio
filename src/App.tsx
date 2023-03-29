@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 
 //Views
@@ -28,7 +28,7 @@ const App = () => {
           </mesh>
         </Canvas>
       </div> */}
-      <Router>
+      <Router basename='/'>
         <Switch>
           <Route path='/' exact>
             <HomeComponent />
