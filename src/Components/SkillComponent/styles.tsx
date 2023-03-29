@@ -1,6 +1,10 @@
 import { Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
+type StyledBadgeTextPropsT = {
+  isDark?: boolean;
+};
+
 export const StyledBadgeWrapper = styled('div')(() => ({
   display: 'flex',
   padding: '2px',
@@ -11,14 +15,17 @@ export const StyledBadgeWrapper = styled('div')(() => ({
   maxWidth: '110px',
 }));
 
-export const StyledBadgeText = styled('span')(() => ({
-  display: 'inline-block',
-  width: '100%',
-  fontSize: '1.1rem',
-  color: 'white',
-  textAlign: 'center',
-  marginTop: '20px',
-}));
+export const StyledBadgeText = styled('span')(
+  ({ isDark = false }: StyledBadgeTextPropsT) =>
+    () => ({
+      display: 'inline-block',
+      width: '100%',
+      fontSize: '1.1rem',
+      color: isDark ? 'black' : 'white',
+      textAlign: 'center',
+      marginTop: '20px',
+    })
+);
 
 export const StyledBadgePaper = styled(Paper)(() => ({
   display: 'flex',
@@ -31,6 +38,6 @@ export const StyledBadgePaper = styled(Paper)(() => ({
   transition: 'all .4s ease',
 
   '&:hover': {
-    transform: 'rotateZ(45deg)',
+    borderRadius: '20px',
   },
 }));

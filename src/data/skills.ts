@@ -1,47 +1,51 @@
+import sql from '../images/sql.png';
+import rails from '../images/rails.png';
+import nodejs from '../images/nodejs.png';
+import mongodb from '../images/mongodb.png';
+import react from '../images/react.png';
+import typescript from '../images/typescript.png';
+import angular from '../images/angular.png';
+import threejs from '../images/threejs.png';
+
 export const Skills = [
   {
     name: 'SQL',
-    logo: '',
+    logo: sql,
     type: 'be',
   },
   {
     name: 'Node JS',
-    logo: '',
-    type: 'be',
-  },
-  {
-    name: 'Nest JS',
-    logo: '',
+    logo: nodejs,
     type: 'be',
   },
   {
     name: 'Ruby on Rails',
-    logo: '',
+    logo: rails,
     type: 'be',
   },
   {
     name: 'Mongo',
-    logo: '',
+    logo: mongodb,
     type: 'be',
   },
   {
     name: 'React',
-    logo: '',
+    logo: react,
     type: 'fe',
   },
   {
     name: 'Three JS',
-    logo: '',
+    logo: threejs,
     type: 'fe',
   },
   {
-    name: 'Redux Saga',
-    logo: '',
+    name: 'Angular',
+    logo: angular,
     type: 'fe',
   },
   {
-    name: 'React Query',
-    logo: '',
+    name: 'Typescript',
+    logo: typescript,
     type: 'fe',
   },
 ];

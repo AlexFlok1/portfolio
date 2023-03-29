@@ -16,15 +16,15 @@ const HomeComponent = () => {
 
   useEffect(() => {
     //call three js stuff
-    // threejs();
+    threejs();
 
     return () => {
-      /* setSquare((prev) => {
+      setSquare((prev) => {
         prev.scene.remove(prev.mesh);
         prev.geometry.dispose();
         prev.material.dispose();
         return null;
-      });*/
+      });
       cleanUp();
     };
   }, []);
@@ -88,8 +88,8 @@ const HomeComponent = () => {
   };
 
   const cleanUp = () => {
-    // document.getElementById('THREE-CANVAS').children[0].remove();
-    // document.getElementById('THREE-CANVAS').style.display = 'none';
+    document.getElementById('THREE-CANVAS').children[0].remove();
+    document.getElementById('THREE-CANVAS').style.display = 'none';
   };
 
   return (

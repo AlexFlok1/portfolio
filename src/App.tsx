@@ -20,14 +20,14 @@ const App = () => {
 
   return (
     <>
-      {/* <div id='THREE-CANVAS'>
-        <Canvas>
+      <div id='THREE-CANVAS'>
+        {/* <Canvas>
           <mesh position={[0, 0, 5]} ref={refMesh}>
             <boxGeometry args={[2, 2, 2, 10, 10, 10]} />
             <meshBasicMaterial args={{ color: '#ededed', wireFrame: true }} />
           </mesh>
-        </Canvas>
-      </div> */}
+  </Canvas> */}
+      </div>
       <Router basename='/'>
         <Switch>
           <Route path='/' exact>
